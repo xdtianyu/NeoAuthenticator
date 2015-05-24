@@ -86,4 +86,27 @@
     <string name="button_exit_howitworks_flow" msgid="6789714209015077393">"Salir"</string>
     <string name="welcome_page_title" msgid="1597640810952332788">"Cada día se interceptan miles de cuentas online"</string>
     <string name="welcome_page_details" msgid="3484579068463805365">"La verificación en dos pasos protege tu cuenta de Google incluso si te roban la contraseña"</string>
+
+    <string name="cmd_confirm">Confirmar</string>
+    <string name="cmd_continue">Continuar</string>
+    <string name="cmd_forgot_pattern">¿Has olvidado el patrón?</string>
+    <string name="cmd_retry">Reintentar</string>
+    <string name="loading">Cargando…</string>
+    <string name="lockscreen_access_pattern_cell_added">Celda añadida</string>
+    <string name="lockscreen_access_pattern_cleared">Patrón limpiado</string>
+    <string name="lockscreen_access_pattern_detected">Patrón completado</string>
+    <string name="lockscreen_access_pattern_start">Patrón empezado</string>
+    <string name="msg_connect_4dots">Conecta al menos 4 puntos.\nIntentalo de nuevo…</string>
+    <string name="msg_draw_an_unlock_pattern">Dibuja un patrón de desbloqueo:</string>
+    <string name="msg_draw_pattern_to_unlock">Dibuja el patrón de desbloqueo:</string>
+    <string name="msg_pattern_recorded">Patrón guardado!</string>
+    <string name="msg_redraw_pattern_to_confirm">Dibujar de nuevo para confirmar:</string>
+    <string name="msg_release_finger_when_done">Levanta el dedo cuando termines</string>
+    <string name="msg_try_again">Lo siento, intentalo de nuevo</string>
+    <string name="msg_your_new_unlock_pattern">Nuevo patrón de desbloqueo:</string>
+
+    <plurals name="pmsg_connect_x_dots">
+        <item quantity="one">Conecta al menos %1$d punto.\nIntentalo de nuevo…</item>
+        <item quantity="other">Conecta al menos %1$d puntos.\nIntentalo de nuevo…</item>
+    </plurals>
 </resources>

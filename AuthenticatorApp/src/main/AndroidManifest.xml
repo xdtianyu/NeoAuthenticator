@@ -96,9 +96,15 @@
             android:label="@string/timesync_sync_now_screen_title"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
-            android:name="com.google.android.apps.authenticator.ExportActivity"
+            android:name="org.xdty.authenticator.ExportActivity"
             android:label="@string/export_preference_title" >
         </activity>
+
+        <activity
+            android:name="org.xdty.authenticator.androidlockpattern.LockPatternActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:screenOrientation="user"
+            android:theme="@style/Theme.Dark" />
     </application>
 
 </manifest>

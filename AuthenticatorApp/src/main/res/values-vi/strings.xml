@@ -86,4 +86,27 @@
     <string name="button_exit_howitworks_flow" msgid="6789714209015077393">"Thoát"</string>
     <string name="welcome_page_title" msgid="1597640810952332788">"Hàng nghìn tài khoản trực tuyến bị tấn công mỗi ngày."</string>
     <string name="welcome_page_details" msgid="3484579068463805365">"Xác minh 2 bước bảo vệ tài khoản Google của bạn ngay cả khi mật khẩu của bạn bị lấy cắp."</string>
+
+    <string name="cmd_confirm">Xác nhận</string>
+    <string name="cmd_continue">Tiếp tục</string>
+    <string name="cmd_forgot_pattern">Quên rồi?</string>
+    <string name="cmd_retry">Thử lại</string>
+    <string name="loading">Đang tải…</string>
+    <string name="lockscreen_access_pattern_cell_added">Đã thêm điểm</string>
+    <string name="lockscreen_access_pattern_cleared">Đã xóa mẫu khóa</string>
+    <string name="lockscreen_access_pattern_detected">Hoàn thành mẫu khóa</string>
+    <string name="lockscreen_access_pattern_start">Bắt đầu mẫu khóa</string>
+    <string name="msg_connect_4dots">Kết nối ít nhứt 4 điểm.\nHãy thử lại…</string>
+    <string name="msg_draw_an_unlock_pattern">Vẽ mẫu khóa:</string>
+    <string name="msg_draw_pattern_to_unlock">Vẽ mẫu khóa để truy cập:</string>
+    <string name="msg_pattern_recorded">Mẫu khóa đã được nhớ!</string>
+    <string name="msg_redraw_pattern_to_confirm">Vẽ lại mẫu khóa để xác nhận:</string>
+    <string name="msg_release_finger_when_done">Thả ngón tay khi xong</string>
+    <string name="msg_try_again">Xin lỗi, hãy thử lại</string>
+    <string name="msg_your_new_unlock_pattern">Mẫu khóa mới của bạn:</string>
+
+    <plurals name="pmsg_connect_x_dots">
+        <item quantity="other">Kết nối ít nhứt %1$d điểm.\nHãy thử lại…</item>
+    </plurals>
+
 </resources>

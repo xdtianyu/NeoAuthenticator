@@ -1,0 +1,146 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--</style>-->
+
+    <style name="BaseTheme.Dark" parent="@android:style/Theme" />
+
+    <style name="BaseThemeHelper.Dark" parent="@style/BaseTheme.Dark" />
+
+    <style name="Theme.Dark" parent="@style/BaseThemeHelper.Dark">
+
+        <!-- AOSP -->
+
+        <item name="android:windowBackground">@color/aosp_background_material_dark</item>
+
+        <!-- android-lockpattern -->
+
+        <item name="theme_dialog">@style/Theme.Dialog.Dark</item>
+        <item name="ic_action_lockpattern">@drawable/ic_action_lockpattern_light</item>
+        <item name="color_lock_pattern_view_regular">@color/lock_pattern_view_regular_light</item>
+        <item name="color_lock_pattern_view_success">@color/lock_pattern_view_success_light</item>
+        <item name="color_lock_pattern_view_error">@color/lock_pattern_view_error_light</item>
+    </style>
+
+    <style name="BaseTheme.Light" parent="@android:style/Theme.Light" />
+
+    <style name="BaseThemeHelper.Light" parent="@style/BaseTheme.Light" />
+
+    <style name="Theme.Light" parent="@style/BaseThemeHelper.Light">
+
+        <!-- AOSP -->
+
+        <item name="android:windowBackground">@color/aosp_background_material_light</item>
+
+        <!-- android-lockpattern -->
+
+        <item name="theme_dialog">@style/Theme.Dialog.Light</item>
+        <item name="ic_action_lockpattern">@drawable/ic_action_lockpattern_dark</item>
+        <item name="color_lock_pattern_view_regular">@color/lock_pattern_view_regular_dark</item>
+        <item name="color_lock_pattern_view_success">@color/lock_pattern_view_success_dark</item>
+        <item name="color_lock_pattern_view_error">@color/lock_pattern_view_error_dark</item>
+    </style>
+
+    <style name="BaseTheme.Light.DarkActionBar" parent="@android:style/Theme.Light" />
+
+    <style name="BaseThemeHelper.Light.DarkActionBar" parent="@style/BaseTheme.Light.DarkActionBar" />
+
+    <style name="Theme.Light.DarkActionBar" parent="@style/BaseThemeHelper.Light.DarkActionBar">
+
+        <!-- AOSP -->
+
+        <item name="android:windowBackground">@color/aosp_background_material_light</item>
+
+        <!-- android-lockpattern -->
+
+        <item name="theme_dialog">@style/Theme.Dialog.Light</item>
+        <item name="ic_action_lockpattern">@drawable/ic_action_lockpattern_dark</item>
+        <item name="color_lock_pattern_view_regular">@color/lock_pattern_view_regular_dark</item>
+        <item name="color_lock_pattern_view_success">@color/lock_pattern_view_success_dark</item>
+        <item name="color_lock_pattern_view_error">@color/lock_pattern_view_error_dark</item>
+    </style>
+
+    <style name="BaseTheme.Dialog.Dark" parent="@android:style/Theme.Dialog">
+
+        <!-- AOSP -->
+
+        <item name="android:windowBackground">@drawable/aosp_dialog_full_holo_dark</item>
+    </style>
+
+    <style name="BaseThemeHelper.Dialog.Dark" parent="@style/BaseTheme.Dialog.Dark" />
+
+    <style name="Theme.Dialog.Dark" parent="@style/BaseThemeHelper.Dialog.Dark">
+
+        <!-- android-lockpattern -->
+
+        <item name="theme_dialog">@style/Theme.Dialog.Dark</item>
+        <item name="ic_action_lockpattern">@drawable/ic_action_lockpattern_light</item>
+        <item name="color_lock_pattern_view_regular">@color/lock_pattern_view_regular_light</item>
+        <item name="color_lock_pattern_view_success">@color/lock_pattern_view_success_light</item>
+        <item name="color_lock_pattern_view_error">@color/lock_pattern_view_error_light</item>
+    </style>
+
+    <style name="BaseTheme.Dialog.Light" parent="@android:style/Theme.Light">
+
+        <!-- AOSP -->
+
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowTitleStyle">@style/AOSP_DialogWindowTitle</item>
+        <item name="android:windowBackground">@drawable/aosp_dialog_full_holo_light</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="BaseThemeHelper.Dialog.Light" parent="@style/BaseTheme.Dialog.Light" />
+
+    <style name="Theme.Dialog.Light" parent="@style/BaseThemeHelper.Dialog.Light">
+
+        <!-- android-lockpattern -->
+
+        <item name="theme_dialog">@style/Theme.Dialog.Light</item>
+        <item name="ic_action_lockpattern">@drawable/ic_action_lockpattern_dark</item>
+        <item name="color_lock_pattern_view_regular">@color/lock_pattern_view_regular_dark</item>
+        <item name="color_lock_pattern_view_success">@color/lock_pattern_view_success_dark</item>
+        <item name="color_lock_pattern_view_error">@color/lock_pattern_view_error_dark</item>
+    </style>
+
+    <style name="AOSP_DialogWindowTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DialogWindowTitle</item>
+    </style>
+
+    <declare-styleable name="LockPatternView">
+
+        <!--
+             Aspect to use when drawing LockPatternView. Choices are "square"(default), "lock_width"
+             or "lock_height"
+        -->
+        <attr name="aspect" format="string" />
+        <!-- Color to use when drawing LockPatternView paths. -->
+        <attr name="pathColor" format="color|reference" />
+        <!-- The regular pattern color -->
+        <attr name="regularColor" format="color|reference" />
+        <!-- The error color -->
+        <attr name="errorColor" format="color|reference" />
+        <!-- The success color -->
+        <attr name="successColor" format="color|reference" />
+    </declare-styleable>
+
+    <item name="button_bar_style" type="style">@null</item>
+    <item name="button_bar_button_style" type="style">@null</item>
+
+    <attr name="button_bar_style" format="reference" />
+    <attr name="button_bar_button_style" format="reference" />
+    <attr name="theme_dialog" format="reference" />
+
+
+</resources>

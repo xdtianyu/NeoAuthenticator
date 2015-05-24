@@ -86,4 +86,27 @@
     <string name="button_exit_howitworks_flow" msgid="6789714209015077393">"Beenden"</string>
     <string name="welcome_page_title" msgid="1597640810952332788">"Täglich werden Tausende von Online-Konten gehackt"</string>
     <string name="welcome_page_details" msgid="3484579068463805365">"Die Bestätigung in zwei Schritten schützt Ihr Google-Konto selbst dann, wenn jemand Ihr Passwort herausfindet."</string>
+
+    <string name="cmd_confirm">Bestätigen</string>
+    <string name="cmd_continue">Weiter</string>
+    <string name="cmd_forgot_pattern">Muster vergessen?</string>
+    <string name="cmd_retry">Wiederholen</string>
+    <string name="loading">Wird geladen…</string>
+    <string name="lockscreen_access_pattern_cell_added">Zelle hinzugefügt</string>
+    <string name="lockscreen_access_pattern_cleared">Muster gelöscht</string>
+    <string name="lockscreen_access_pattern_detected">Muster abgeschlossen</string>
+    <string name="lockscreen_access_pattern_start">Entsperrungsmuster gestartet</string>
+    <string name="msg_connect_4dots">Verbinde mind. 4 Punkte.\nVersuche es bitte erneut…</string>
+    <string name="msg_draw_an_unlock_pattern">Zeichne Entsperrungsmuster:</string>
+    <string name="msg_draw_pattern_to_unlock">Zum Entsperren Muster zeichnen:</string>
+    <string name="msg_pattern_recorded">Muster aufgezeichnet!</string>
+    <string name="msg_redraw_pattern_to_confirm">Muster wiederholen:</string>
+    <string name="msg_release_finger_when_done">Loslassen wenn fertig</string>
+    <string name="msg_try_again">Entschuldigung, bitte erneut versuchen.</string>
+    <string name="msg_your_new_unlock_pattern">Dein neues Entsperrungsmuster:</string>
+
+    <plurals name="pmsg_connect_x_dots">
+        <item quantity="one">Verbinde mind. %1$d Punkt.\nVersuche es bitte erneut…</item>
+        <item quantity="other">Verbinde mind. %1$d Punkte.\nVersuche es bitte erneut…</item>
+    </plurals>
 </resources>

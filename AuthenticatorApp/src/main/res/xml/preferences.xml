@@ -33,7 +33,7 @@
         android:persistent="false">
         <intent
             android:targetPackage="@string/app_package_name"
-            android:targetClass="com.google.android.apps.authenticator.ExportActivity">
+            android:targetClass="org.xdty.authenticator.ExportActivity">
         </intent>
     </PreferenceScreen>
 

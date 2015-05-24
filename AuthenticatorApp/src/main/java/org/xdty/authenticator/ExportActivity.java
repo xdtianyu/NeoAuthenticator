@@ -1,4 +1,4 @@
-package com.google.android.apps.authenticator;
+package org.xdty.authenticator;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.apps.authenticator.AccountDb;
 import com.google.android.apps.authenticator.testability.DependencyInjector;
 import com.google.android.apps.authenticator2.R;
 
