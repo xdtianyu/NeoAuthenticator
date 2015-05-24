@@ -3,6 +3,14 @@ NeoAuthenticator
 
 NeoAuthenticator is an enhancement to google Authenticator. Add export/import, lock pattern features. 
 
+Added Features
+--------------
+1\. Export and import
+You can export and import your keys with password to external storage, the file is encrypted via PBKDF2/AES. More [ExportActivity.java](https://github.com/xdtianyu/NeoAuthenticator/blob/master/AuthenticatorApp/src/main/java/org/xdty/authenticator/ExportActivity.java)
+
+2\. Lock pattern
+You can setup a lock pattern to prevent others accessing your authenticator's keys. More [LockPatternSettingActivity.java](https://github.com/xdtianyu/NeoAuthenticator/blob/master/AuthenticatorApp/src/main/java/org/xdty/authenticator/LockPatternSettingActivity.java)
+
 Google Authenticator for Android (open source version)
 ======================================================
 Copyright 2010 Google Inc.
