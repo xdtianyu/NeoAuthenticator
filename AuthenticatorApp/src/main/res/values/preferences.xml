@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="pkey_sys_pattern">alp.pkey.sys.pattern</string>
-    <string name="pkey_sys_auto_save_pattern">alp.pkey.sys.auto_save_pattern</string>
-    <string name="pkey_sys_encrypter_class">alp.pkey.sys.encrypter_class</string>
-    <string name="pkey_display_stealth_mode">alp.pkey.display.stealth_mode</string>
-    <string name="pkey_display_min_wired_dots">alp.pkey.display.min_wired_dots</string>
-    <string name="pkey_display_max_retries">alp.pkey.display.max_retries</string>
-    <string name="pkey_display_captcha_wired_dots">alp.pkey.display.captcha_wired_dots</string>
+    <string name="pkey_sys_pattern" translatable="false">alp.pkey.sys.pattern</string>
+    <string name="pkey_sys_auto_save_pattern" translatable="false">alp.pkey.sys.auto_save_pattern</string>
+    <string name="pkey_sys_encrypter_class" translatable="false">alp.pkey.sys.encrypter_class</string>
+    <string name="pkey_display_stealth_mode" translatable="false">alp.pkey.display.stealth_mode</string>
+    <string name="pkey_display_min_wired_dots" translatable="false">alp.pkey.display.min_wired_dots</string>
+    <string name="pkey_display_max_retries" translatable="false">alp.pkey.display.max_retries</string>
+    <string name="pkey_display_captcha_wired_dots" translatable="false">alp.pkey.display.captcha_wired_dots</string>
 
     <bool name="pkey_sys_auto_save_pattern_default">false</bool>
     <bool name="pkey_display_stealth_mode_default">false</bool>

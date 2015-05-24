@@ -24,11 +24,21 @@
     android:shouldDisableView="false"/>
   <PreferenceScreen
     android:key="opensource"
-    android:title="@string/opensource_preference_title">
+    android:title="@string/opensource_preference_title"
+      android:summary="@string/app_package_name">
     <intent
       android:action="android.intent.action.VIEW"
       android:data="@string/opensource_page_url" />
   </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="opensource"
+        android:title="@string/opensource_preference_title"
+        android:summary="@string/app_package_name_neo">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="@string/opensource_page_url_neo" />
+    </PreferenceScreen>
   <PreferenceScreen
     android:key="terms"
     android:title="@string/terms_preference_title">

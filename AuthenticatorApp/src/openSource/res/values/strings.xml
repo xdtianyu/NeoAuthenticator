@@ -18,6 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
   <!-- The package of the application flavor, for use within preferences, etc. -->
+  <string name="app_package_name_neo" translatable="false">org.xdty.authenticator</string>
   <string name="app_package_name" translatable="false">com.google.android.apps.authenticator2.os</string>
 
 </resources>

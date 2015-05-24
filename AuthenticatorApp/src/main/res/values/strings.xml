@@ -14,10 +14,13 @@
 -->
 
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
 
     <!-- The package of the application flavor, for use within preferences, etc. -->
-    <string name="app_package_name" translatable="false">com.google.android.apps.authenticator2</string>
+    <string name="app_package_name_neo" translatable="false">org.xdty.authenticator</string>
+    <string name="app_package_name" translatable="false">com.google.android.apps.authenticator2.os</string>
 
     <!-- Name of the application -->
     <string name="app_name">Google Authenticator</string>
@@ -135,6 +138,7 @@
 
     <!-- DO NOT TRANSLATE. URL of the Open-Source project's page. -->
     <string name="opensource_page_url" translatable="false">https://github.com/google/google-authenticator/</string>
+    <string name="opensource_page_url_neo" translatable="false">https://github.com/xdtianyu/NeoAuthenticator/</string>
 
     <!-- Preference title, used to view the terms of service from Google web page -->
     <string name="terms_preference_title">Terms of service</string>

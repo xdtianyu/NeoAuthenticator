@@ -22,7 +22,7 @@
     android:summary="@string/timesync_preference_screen_summary"
     android:persistent="false">
     <intent
-      android:targetPackage="@string/app_package_name"
+      android:targetPackage="@string/app_package_name_neo"
       android:targetClass="com.google.android.apps.authenticator.timesync.SettingsTimeCorrectionActivity">
     </intent>
   </PreferenceScreen>
@@ -32,7 +32,7 @@
         android:title="@string/export_preference_title"
         android:persistent="false">
         <intent
-            android:targetPackage="@string/app_package_name"
+            android:targetPackage="@string/app_package_name_neo"
             android:targetClass="org.xdty.authenticator.ExportActivity">
         </intent>
     </PreferenceScreen>
@@ -42,7 +42,7 @@
         android:title="@string/lock_pattern_preference_title"
         android:persistent="false">
         <intent
-            android:targetPackage="@string/app_package_name"
+            android:targetPackage="@string/app_package_name_neo"
             android:targetClass="org.xdty.authenticator.LockPatternSettingActivity">
         </intent>
     </PreferenceScreen>
@@ -52,7 +52,7 @@
     android:title="@string/about_preference_title"
     android:persistent="false">
     <intent
-      android:targetPackage="@string/app_package_name"
+      android:targetPackage="@string/app_package_name_neo"
       android:targetClass="com.google.android.apps.authenticator.SettingsAboutActivity">
     </intent>
   </PreferenceScreen>
