@@ -25,10 +25,10 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <!--
   NOTE: android:allowBackup is set to false below to prevent the key material from being extracted
   from the device using various backup methods (e.g., adb backup introduced in ICS).
@@ -99,12 +99,15 @@
             android:name="org.xdty.authenticator.ExportActivity"
             android:label="@string/export_preference_title" >
         </activity>
-
         <activity
             android:name="org.xdty.authenticator.androidlockpattern.LockPatternActivity"
             android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
             android:screenOrientation="user"
             android:theme="@style/Theme.Dark" />
+        <activity
+            android:name="org.xdty.authenticator.LockPatternSettingActivity"
+            android:label="@string/lock_pattern_preference_title" >
+        </activity>
     </application>
 
 </manifest>

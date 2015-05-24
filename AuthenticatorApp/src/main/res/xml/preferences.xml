@@ -37,6 +37,16 @@
         </intent>
     </PreferenceScreen>
 
+    <PreferenceScreen
+        android:key="lock_pattern"
+        android:title="@string/lock_pattern_preference_title"
+        android:persistent="false">
+        <intent
+            android:targetPackage="@string/app_package_name"
+            android:targetClass="org.xdty.authenticator.LockPatternSettingActivity">
+        </intent>
+    </PreferenceScreen>
+
   <PreferenceScreen
     android:key="about"
     android:title="@string/about_preference_title"
