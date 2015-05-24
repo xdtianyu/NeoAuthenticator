@@ -1,3 +1,8 @@
+NeoAuthenticator
+======================================================
+
+NeoAuthenticator is an enhancement of google Authenticator. Add export/import, lock pattern features. 
+
 Google Authenticator for Android (open source version)
 ======================================================
 Copyright 2010 Google Inc.
