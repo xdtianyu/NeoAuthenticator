@@ -58,8 +58,8 @@ import com.google.android.apps.authenticator.dataimport.ImportController;
 import com.google.android.apps.authenticator.howitworks.IntroEnterPasswordActivity;
 import com.google.android.apps.authenticator.testability.DependencyInjector;
 import com.google.android.apps.authenticator.testability.TestableActivity;
-import com.google.android.apps.authenticator2.R;
 
+import org.xdty.authenticator.R;
 import org.xdty.authenticator.androidlockpattern.LockPatternActivity;
 import org.xdty.authenticator.androidlockpattern.util.Settings;
 

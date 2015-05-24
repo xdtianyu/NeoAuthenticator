@@ -24,7 +24,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 
-import com.google.android.apps.authenticator2.R;
+import org.xdty.authenticator.R;
 
 
 /**

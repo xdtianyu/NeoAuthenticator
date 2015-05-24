@@ -40,8 +40,7 @@ import android.view.accessibility.AccessibilityManager;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 
-import com.google.android.apps.authenticator2.R;
-
+import org.xdty.authenticator.R;
 import org.xdty.authenticator.androidlockpattern.util.FloatAnimator;
 import org.xdty.authenticator.androidlockpattern.util.ResourceUtils;
 

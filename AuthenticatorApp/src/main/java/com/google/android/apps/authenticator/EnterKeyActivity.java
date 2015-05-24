@@ -16,17 +16,18 @@
 
 package com.google.android.apps.authenticator;
 
-import com.google.android.apps.authenticator.AccountDb.OtpType;
-import com.google.android.apps.authenticator.Base32String.DecodingException;
-import com.google.android.apps.authenticator.wizard.WizardPageActivity;
-import com.google.android.apps.authenticator2.R;
-
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import com.google.android.apps.authenticator.AccountDb.OtpType;
+import com.google.android.apps.authenticator.Base32String.DecodingException;
+import com.google.android.apps.authenticator.wizard.WizardPageActivity;
+
+import org.xdty.authenticator.R;
 
 import java.io.Serializable;
 

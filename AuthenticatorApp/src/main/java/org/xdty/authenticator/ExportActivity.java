@@ -20,7 +20,6 @@ import android.widget.Toast;
 
 import com.google.android.apps.authenticator.AccountDb;
 import com.google.android.apps.authenticator.testability.DependencyInjector;
-import com.google.android.apps.authenticator2.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

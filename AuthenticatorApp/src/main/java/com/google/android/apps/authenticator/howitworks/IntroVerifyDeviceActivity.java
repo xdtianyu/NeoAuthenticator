@@ -16,10 +16,11 @@
 
 package com.google.android.apps.authenticator.howitworks;
 
-import com.google.android.apps.authenticator.wizard.WizardPageActivity;
-import com.google.android.apps.authenticator2.R;
-
 import android.os.Bundle;
+
+import com.google.android.apps.authenticator.wizard.WizardPageActivity;
+
+import org.xdty.authenticator.R;
 
 import java.io.Serializable;
 

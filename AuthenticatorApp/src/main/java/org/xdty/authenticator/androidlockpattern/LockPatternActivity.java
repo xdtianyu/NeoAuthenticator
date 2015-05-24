@@ -37,9 +37,8 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.android.apps.authenticator2.BuildConfig;
-import com.google.android.apps.authenticator2.R;
-
+import org.xdty.authenticator.BuildConfig;
+import org.xdty.authenticator.R;
 import org.xdty.authenticator.androidlockpattern.util.IEncrypter;
 import org.xdty.authenticator.androidlockpattern.util.InvalidEncrypterException;
 import org.xdty.authenticator.androidlockpattern.util.LoadingView;
@@ -55,8 +54,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.google.android.apps.authenticator2.BuildConfig.DEBUG;
 import static android.text.format.DateUtils.SECOND_IN_MILLIS;
+import static org.xdty.authenticator.BuildConfig.DEBUG;
 import static org.xdty.authenticator.androidlockpattern.util.Settings.Display.METADATA_CAPTCHA_WIRED_DOTS;
 import static org.xdty.authenticator.androidlockpattern.util.Settings.Display.METADATA_MAX_RETRIES;
 import static org.xdty.authenticator.androidlockpattern.util.Settings.Display.METADATA_MIN_WIRED_DOTS;

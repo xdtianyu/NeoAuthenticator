@@ -16,7 +16,6 @@
 
 package com.google.android.apps.authenticator;
 
-import com.google.android.apps.authenticator2.R;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -27,6 +26,8 @@ import android.graphics.Paint.Style;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
+
+import org.xdty.authenticator.R;
 
 /**
  * Circular countdown indicator. The indicator is a filled arc which starts as a full circle ({@code

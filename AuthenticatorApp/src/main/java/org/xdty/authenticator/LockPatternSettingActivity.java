@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-import com.google.android.apps.authenticator2.R;
-
 import org.xdty.authenticator.androidlockpattern.LockPatternActivity;
 import org.xdty.authenticator.androidlockpattern.util.Settings;
 import org.xdty.authenticator.security.LPEncrypter;

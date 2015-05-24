@@ -5,9 +5,12 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.google.android.apps.authenticator2"
+        applicationId "org.xdty.authenticator"
         minSdkVersion 8
         targetSdkVersion 22
+
+        versionCode 1
+        versionName "1.0"
 
         testApplicationId "com.google.android.apps.authenticator2.tests"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"

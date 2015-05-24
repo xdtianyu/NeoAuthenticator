@@ -16,10 +16,11 @@
 
 package com.google.android.apps.authenticator.timesync;
 
-import com.google.android.apps.authenticator.testability.TestablePreferenceActivity;
-import com.google.android.apps.authenticator2.R;
-
 import android.os.Bundle;
+
+import com.google.android.apps.authenticator.testability.TestablePreferenceActivity;
+
+import org.xdty.authenticator.R;
 
 /**
  * Activity that displays the "Time correction" preferences.

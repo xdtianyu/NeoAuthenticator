@@ -23,7 +23,7 @@ import android.os.AsyncTask;
 import android.os.Handler;
 import android.util.Log;
 
-import com.google.android.apps.authenticator2.R;
+import org.xdty.authenticator.R;
 
 import static android.text.format.DateUtils.SECOND_IN_MILLIS;
 

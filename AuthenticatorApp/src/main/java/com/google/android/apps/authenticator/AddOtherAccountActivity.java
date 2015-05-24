@@ -16,12 +16,13 @@
 
 package com.google.android.apps.authenticator;
 
-import com.google.android.apps.authenticator.wizard.WizardPageActivity;
-import com.google.android.apps.authenticator2.R;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.google.android.apps.authenticator.wizard.WizardPageActivity;
+
+import org.xdty.authenticator.R;
 
 import java.io.Serializable;
 

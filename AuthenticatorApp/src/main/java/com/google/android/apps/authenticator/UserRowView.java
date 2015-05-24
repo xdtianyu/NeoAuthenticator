@@ -16,13 +16,13 @@
 
 package com.google.android.apps.authenticator;
 
-import com.google.android.apps.authenticator2.R;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.accessibility.AccessibilityEvent;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import org.xdty.authenticator.R;
 
 /**
  * Custom view that shows the user, pin, and "Get New Code" button (if enabled).

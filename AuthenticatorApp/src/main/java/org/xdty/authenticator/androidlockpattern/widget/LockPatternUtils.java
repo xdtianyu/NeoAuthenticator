@@ -18,8 +18,7 @@ package org.xdty.authenticator.androidlockpattern.widget;
 
 import android.util.Log;
 
-import com.google.android.apps.authenticator2.BuildConfig;
-
+import org.xdty.authenticator.BuildConfig;
 import org.xdty.authenticator.androidlockpattern.collect.Lists;
 import org.xdty.authenticator.androidlockpattern.util.Randoms;
 

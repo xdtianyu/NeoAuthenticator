@@ -16,10 +16,6 @@
 
 package com.google.android.apps.authenticator.wizard;
 
-import com.google.android.apps.authenticator.AuthenticatorActivity;
-import com.google.android.apps.authenticator.testability.TestableActivity;
-import com.google.android.apps.authenticator2.R;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -27,6 +23,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.google.android.apps.authenticator.AuthenticatorActivity;
+import com.google.android.apps.authenticator.testability.TestableActivity;
+
+import org.xdty.authenticator.R;
 
 import java.io.Serializable;
 

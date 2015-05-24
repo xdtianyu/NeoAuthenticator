@@ -23,7 +23,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Window;
 
-import com.google.android.apps.authenticator2.BuildConfig;
+import org.xdty.authenticator.BuildConfig;
 
 /**
  * UI utilities.

@@ -15,9 +15,10 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.google.android.apps.authenticator2"
-    android:versionCode="21"
-    android:versionName="2.21" >
+    package="org.xdty.authenticator">
+    <!--package="com.google.android.apps.authenticator2">-->
+    <!--android:versionCode="21"-->
+    <!--android:versionName="2.21" >-->
 
     <uses-sdk
         android:minSdkVersion="7"
