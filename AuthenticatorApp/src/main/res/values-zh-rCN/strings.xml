@@ -94,4 +94,11 @@
     <string name="export_message">正在导出，请稍等</string>
     <string name="import_message">正在导入，请稍等</string>
     <string name="import_key_from_storage">从本地存储倒入密钥</string>
+    <string name="import_failed">导入失败</string>
+    <string name="import_succeed">导入成功</string>
+    <string name="export_failed">导出失败</string>
+    <string name="export_succeed">导出成功</string>
+    <string name="export_file_password">设置认证文件密码:</string>
+    <string name="passwrod_error">密码不匹配</string>
+    <string name="verify_password">确认密码:</string>
 </resources>

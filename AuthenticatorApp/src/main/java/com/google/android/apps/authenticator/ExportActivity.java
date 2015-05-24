@@ -1,14 +1,20 @@
 package com.google.android.apps.authenticator;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.util.Base64;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.apps.authenticator.testability.DependencyInjector;
@@ -36,15 +42,12 @@ import javax.crypto.spec.SecretKeySpec;
 public class ExportActivity extends Activity implements MediaScannerConnection.MediaScannerConnectionClient {
 
     public final static String TAG = "ExportActivity";
-
-    private final static String password = "test";
     private final static int PASSWORD_ITERATIONS = 65536;
     private final static int KEY_SIZE = 256;
     private final static int SALT_SIZE = 20;
     private final static int IV_SIZE = 16;
-
     private final static String AUTH_FILE = "Authenticator.key";
-
+    private static String authPassword = "test";
     private AccountDb mAccountDb;
 
     private MediaScannerConnection mMs;
@@ -52,6 +55,9 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
 
     private ProgressDialog progress;
     private Handler handler;
+
+    private AlertDialog importDialog;
+    private AlertDialog exportDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,24 +69,87 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
         findViewById(R.id.export_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                doExport();
+                exportDialog.show();
             }
         });
 
         findViewById(R.id.import_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                doImport();
+                importDialog.show();
             }
         });
 
         progress = new ProgressDialog(this);
         progress.setCancelable(false);
         handler = new Handler();
+
+        LayoutInflater layoutInflater = LayoutInflater.from(this);
+
+        final View exportView = layoutInflater.inflate(R.layout.export_dialog, null);
+        Button positiveButton = (Button)exportView.findViewById(R.id.ok);
+        Button negativeButton = (Button)exportView.findViewById(R.id.cancel);
+
+        positiveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText password = (EditText) exportView.findViewById(R.id.password);
+                EditText verify = (EditText) exportView.findViewById(R.id.password_verify);
+
+                if (password.getText().toString().equals(verify.getText().toString())) {
+                    authPassword = password.getText().toString();
+                    password.setText("");
+                    verify.setText("");
+                    doExport();
+                    exportDialog.dismiss();
+                } else {
+                    TextView error = (TextView) exportView.findViewById(R.id.password_error);
+                    error.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        negativeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                exportDialog.dismiss();
+            }
+        });
+
+        AlertDialog.Builder exportDialogBuilder = new AlertDialog.Builder(this);
+        exportDialogBuilder.setView(exportView);
+
+        exportDialog = exportDialogBuilder.create();
+
+        final View importView = layoutInflater.inflate(R.layout.import_dialog, null);
+        AlertDialog.Builder importDialogBuilder = new AlertDialog.Builder(this);
+        importDialogBuilder
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        EditText password = (EditText) importView.findViewById(R.id.password);
+                        authPassword = password.getText().toString();
+                        password.setText("");
+                        doImport();
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, null)
+                .setView(importView);
+
+        importDialog = importDialogBuilder.create();
     }
 
     @Override
     protected void onDestroy() {
+
+        if (importDialog != null) {
+            importDialog.dismiss();
+        }
+
+        if (exportDialog != null) {
+            exportDialog.dismiss();
+        }
+
         if (progress != null) {
             progress.dismiss();
         }
@@ -95,9 +164,9 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
 
                 try {
                     exportKeys();
-                    makeToast("Exported succeed");
+                    makeToast(getString(R.string.export_succeed));
                 } catch (Exception e) {
-                    makeToast("Exported error");
+                    makeToast(getString(R.string.export_failed));
                     e.printStackTrace();
                 } finally {
                     showProcessDialog(false, "");
@@ -115,10 +184,10 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
 
                 try {
                     importKeys();
-                    makeToast("Imported succeed");
+                    makeToast(getString(R.string.import_succeed));
                 } catch (Exception e) {
                     e.printStackTrace();
-                    makeToast("Imported error");
+                    makeToast(getString(R.string.import_failed));
                 } finally {
                     showProcessDialog(false, "");
                 }
@@ -240,7 +309,7 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
         // Derive the key
         SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
         PBEKeySpec spec = new PBEKeySpec(
-                password.toCharArray(),
+                authPassword.toCharArray(),
                 saltBytes,
                 PASSWORD_ITERATIONS,
                 KEY_SIZE
@@ -277,7 +346,7 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
         // Derive the key
         SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
         PBEKeySpec spec = new PBEKeySpec(
-                password.toCharArray(),
+                authPassword.toCharArray(),
                 saltBytes,
                 PASSWORD_ITERATIONS,
                 KEY_SIZE

@@ -16,4 +16,5 @@
 
 <resources>
   <color name="countdown_indicator">#ff71ca00</color>
+    <color name="holo_red_light">#ffff4444</color>
 </resources>

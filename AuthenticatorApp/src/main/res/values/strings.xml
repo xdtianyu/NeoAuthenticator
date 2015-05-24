@@ -333,5 +333,12 @@
     <string name="export_message">Exporting, please wait a moment</string>
     <string name="import_message">Importing, please wait a moment</string>
     <string name="import_key_from_storage">Import key from storage</string>
+    <string name="import_succeed">Import succeed</string>
+    <string name="import_failed">Import failed</string>
+    <string name="export_succeed">Export succeed</string>
+    <string name="export_failed">Export failed</string>
+    <string name="export_file_password">Set authenticate file\'s password:</string>
+    <string name="verify_password">Verify password:</string>
+    <string name="passwrod_error">Password not match</string>
 
 </resources>
