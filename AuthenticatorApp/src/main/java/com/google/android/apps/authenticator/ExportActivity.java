@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +48,7 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
     private final static int SALT_SIZE = 20;
     private final static int IV_SIZE = 16;
     private final static String AUTH_FILE = "Authenticator.key";
-    private static String authPassword = "test";
+    private static String authPassword = "";
     private AccountDb mAccountDb;
 
     private MediaScannerConnection mMs;
@@ -95,15 +96,22 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
             public void onClick(View v) {
                 EditText password = (EditText) exportView.findViewById(R.id.password);
                 EditText verify = (EditText) exportView.findViewById(R.id.password_verify);
+                TextView error = (TextView) exportView.findViewById(R.id.password_error);
 
                 if (password.getText().toString().equals(verify.getText().toString())) {
                     authPassword = password.getText().toString();
-                    password.setText("");
-                    verify.setText("");
-                    doExport();
-                    exportDialog.dismiss();
+
+                    if (TextUtils.isEmpty(authPassword)) {
+                        error.setText(R.string.password_empty);
+                        error.setVisibility(View.VISIBLE);
+                    } else {
+                        password.setText("");
+                        verify.setText("");
+                        doExport();
+                        exportDialog.dismiss();
+                    }
                 } else {
-                    TextView error = (TextView) exportView.findViewById(R.id.password_error);
+                    error.setText(R.string.passwrod_error);
                     error.setVisibility(View.VISIBLE);
                 }
             }

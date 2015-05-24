@@ -86,8 +86,7 @@
     <string name="button_exit_howitworks_flow" msgid="6789714209015077393">"退出"</string>
     <string name="welcome_page_title" msgid="1597640810952332788">"每天都有数千个在线帐户被盗用。"</string>
     <string name="welcome_page_details" msgid="3484579068463805365">"即使您的密码被盗，两步验证也能保护您的 Google 帐户。"</string>
-    <string name="title_activity_export">导出</string>
-    <string name="export_preference_title">导出</string>
+    <string name="export_preference_title">导出/导入</string>
     <string name="export_button_text">导出</string>
     <string name="import_button_text">导入</string>
     <string name="export_key_to_storage">导出密钥到本地存储</string>
@@ -101,4 +100,5 @@
     <string name="export_file_password">设置认证文件密码:</string>
     <string name="passwrod_error">密码不匹配</string>
     <string name="verify_password">确认密码:</string>
+    <string name="password_empty">密码不能为空</string>
 </resources>

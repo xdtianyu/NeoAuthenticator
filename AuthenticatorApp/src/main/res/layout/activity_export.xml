@@ -45,8 +45,4 @@
             android:text="@string/import_button_text"
             android:layout_below="@+id/export_button"/>
     </LinearLayout>
-
-
-
-
 </LinearLayout>

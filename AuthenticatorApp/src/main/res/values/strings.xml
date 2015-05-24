@@ -324,9 +324,8 @@
   <string name="welcome_page_details">
     2-step verification protects your Google account even if your password is stolen.
   </string>
-    <string name="title_activity_export">ExportActivity</string>
 
-    <string name="export_preference_title">Export</string>
+    <string name="export_preference_title">Export/Import</string>
     <string name="export_button_text">Export</string>
     <string name="import_button_text">Import</string>
     <string name="export_key_to_storage">Export keys to storage</string>
@@ -340,5 +339,6 @@
     <string name="export_file_password">Set authenticate file\'s password:</string>
     <string name="verify_password">Verify password:</string>
     <string name="passwrod_error">Password not match</string>
+    <string name="password_empty">Password is empty</string>
 
 </resources>

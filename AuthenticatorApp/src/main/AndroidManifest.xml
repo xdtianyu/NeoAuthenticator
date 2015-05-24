@@ -97,7 +97,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name="com.google.android.apps.authenticator.ExportActivity"
-            android:label="@string/title_activity_export" >
+            android:label="@string/export_preference_title" >
         </activity>
     </application>
 
