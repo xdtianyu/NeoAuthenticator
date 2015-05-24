@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.util.Base64;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -93,7 +91,7 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
         new Thread(new Runnable() {
             @Override
             public void run() {
-                showProcessDialog(true);
+                showProcessDialog(true, getString(R.string.export_message));
 
                 try {
                     exportKeys();
@@ -102,7 +100,7 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
                     makeToast("Exported error");
                     e.printStackTrace();
                 } finally {
-                    showProcessDialog(false);
+                    showProcessDialog(false, "");
                 }
             }
         }).start();
@@ -113,7 +111,7 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
             @Override
             public void run() {
 
-                showProcessDialog(true);
+                showProcessDialog(true, getString(R.string.import_message));
 
                 try {
                     importKeys();
@@ -122,17 +120,18 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
                     e.printStackTrace();
                     makeToast("Imported error");
                 } finally {
-                    showProcessDialog(false);
+                    showProcessDialog(false, "");
                 }
             }
         }).start();
     }
 
-    private void showProcessDialog(final boolean isVisible) {
+    private void showProcessDialog(final boolean isVisible, final String message) {
         handler.post(new Runnable() {
             @Override
             public void run() {
                 if (isVisible) {
+                    progress.setMessage(message);
                     progress.show();
                 } else {
                     progress.dismiss();
@@ -215,28 +214,6 @@ public class ExportActivity extends Activity implements MediaScannerConnection.M
         mFile = exportFile;
         mMs = new MediaScannerConnection(this, this);
         mMs.connect();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_export, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

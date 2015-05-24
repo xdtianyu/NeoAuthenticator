@@ -90,4 +90,8 @@
     <string name="export_preference_title">导出</string>
     <string name="export_button_text">导出</string>
     <string name="import_button_text">导入</string>
+    <string name="export_key_to_storage">导出密钥到本地存储</string>
+    <string name="export_message">正在导出，请稍等</string>
+    <string name="import_message">正在导入，请稍等</string>
+    <string name="import_key_from_storage">从本地存储倒入密钥</string>
 </resources>
